@@ -1,44 +1,55 @@
-🧾 Fullstack Registration Form
+# 👋 Hi, I'm **Vedant Wasalwar**
 
-A Full Stack Web Application that allows users to register with their name, email, and password.
-This project demonstrates how to connect a React frontend with a Django REST Framework backend to build a complete user registration system.
+🎓 **B.Tech (CSE) Student**  
+💻 Passionate about **Web Development**  
+🌱 Currently learning: **React, Django, REST APIs, Full Stack Development**  
+🚀 I enjoy creating simple and clean real-world web projects.
 
-🚀 Features
+---
 
-User registration with name, email, and password
+## 🔥 Featured Project – Student Registration Form (Web)
+A full-stack **Web Application** built using:
 
-Validation for duplicate emails
+### 🌐 Frontend (React)
+- React.js  
+- Responsive UI  
+- Form validation  
+- Axios for API calls  
 
-API integration between frontend and backend
+### 🖥️ Backend (Django)
+- Django + Django REST Framework  
+- Student data stored in database  
+- CRUD API for student registration  
 
-REST API built using Django REST Framework (DRF)
+👉 *This project improved my understanding of how frontend and backend interact using REST APIs.*
 
-CORS enabled for secure frontend-backend communication
+---
 
-SQLite database for local development
+## 🧰 Tech Stack – Web Development
+### 💻 Languages & Tools
+- HTML5 / CSS3  
+- JavaScript (ES6+)  
+- React.js  
+- Django  
+- Python  
+- REST APIs  
+- Git & GitHub  
 
-🧩 Tech Stack
-Layer	Technology
-Frontend	React.js (with Axios, Fetch API)
-Backend	Django & Django REST Framework
-Database	SQLite
-Styling	CSS / Bootstrap
-Communication	JSON-based REST API
-⚙️ Project Structure
-fullstack_project/
-│
-├── backend/                   # Django backend
-│   ├── core/                  # Main Django project
-│   ├── api/                   # App containing models, views, and urls
-│   ├── db.sqlite3             # Database
-│   └── manage.py
-│
-├── frontend/                  # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── RegisterForm.js
-│   │   └── App.js
-│   └── package.json
-│
-└── README.md
+---
+
+## 📌 What I Do
+- Build frontend user interfaces  
+- Create backend APIs using Django  
+- Connect frontend with backend  
+- Learn new web technologies  
+- Focus on clean, readable code  
+
+---
+
+## 📫 Connect With Me
+📧 **Email:** vedantwasalwar43@gmail.com  
+🔗 **GitHub:** github.com/VedantWasalwar  
+
+---
+
+⭐ *Thanks for visiting my profile! Feel free to explore my web development projects.*
