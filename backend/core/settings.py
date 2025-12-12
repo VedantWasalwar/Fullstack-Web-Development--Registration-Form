@@ -1,18 +1,14 @@
 import os
 from pathlib import Path
 
-# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key secret!
 SECRET_KEY = 'django-insecure-your-secret-key'
 
-# SECURITY WARNING: don’t run with debug turned on in production!
-DEBUG = True
+DEBUG = False   # IMPORTANT for Render
 
-ALLOWED_HOSTS = ['*']  # allow all for local dev
+ALLOWED_HOSTS = ['*']  
 
-# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -21,20 +17,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    # ✅ Third-party apps
     'corsheaders',
     'rest_framework',
-
-    # ✅ Your Django app
     'api',
 ]
 
 MIDDLEWARE = [
-    # ✅ CORS middleware should be at the top
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-
-    # ✅ Default Django middleware
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -63,7 +53,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# ✅ Database configuration
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -71,7 +60,6 @@ DATABASES = {
     }
 }
 
-# ✅ Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -79,22 +67,16 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# ✅ Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# ✅ Static files
-STATIC_URL = 'static/'
+# STATIC FILES FOR RENDER
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# ✅ Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ✅ CORS setup — allow React frontend
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React development server
-]
-
-# Optional (useful during development)
+# CORS
 CORS_ALLOW_ALL_ORIGINS = True
