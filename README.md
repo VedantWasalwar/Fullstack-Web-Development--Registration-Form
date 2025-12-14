@@ -44,7 +44,7 @@ A full-stack **Web Application** built using:
 - Learn new web technologies  
 - Focus on clean, readable code  
 ---
-## 🌐 Live Demo
+## 🌐 Live 
 
 - Frontend: https://heartfelt-torte-78d8ed.netlify.app/
 - Backend API: https://fullstack-web-development-registration-w0os.onrender.com/admin
