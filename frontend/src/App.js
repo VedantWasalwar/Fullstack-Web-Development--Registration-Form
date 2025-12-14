@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import BASE_URL from "./api";
 
 function App() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -10,20 +16,32 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:8000/api/register/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
 
-    const data = await response.json();
-    setMessage(data.message || data.error);
+    try {
+      const response = await fetch(`${BASE_URL}register/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+      setMessage(data.message || data.error);
+    } catch (error) {
+      setMessage("Server error. Please try again.");
+    }
   };
 
   return (
     <div style={styles.body}>
-      <div style={styles.card} className="animated-card">
-        <h2 style={styles.title}> User Registration</h2>
+      <div
+        style={{
+          ...styles.card,
+          transform: show ? "translateX(0)" : "translateX(-120%)",
+          opacity: show ? 1 : 0,
+          transition: "all 0.9s ease",
+        }}
+      >
+        <h2 style={styles.title}>User Registration</h2>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -32,7 +50,7 @@ function App() {
             placeholder="Full Name"
             onChange={handleChange}
             style={styles.input}
-            className="input-animate"
+            required
           />
 
           <input
@@ -41,7 +59,7 @@ function App() {
             placeholder="Email Address"
             onChange={handleChange}
             style={styles.input}
-            className="input-animate"
+            required
           />
 
           <input
@@ -50,10 +68,10 @@ function App() {
             placeholder="Password"
             onChange={handleChange}
             style={styles.input}
-            className="input-animate"
+            required
           />
 
-          <button type="submit" style={styles.button} className="btn-animate">
+          <button type="submit" style={styles.button}>
             Register
           </button>
         </form>
@@ -62,40 +80,10 @@ function App() {
           {message}
         </p>
       </div>
-
-      {/* CSS ANIMATIONS */}
-      <style>{`
-        .animated-card {
-          animation: slideDown 0.8s ease forwards;
-        }
-
-        @keyframes slideDown {
-          0% { opacity: 0; transform: translateY(-40px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .input-animate:focus {
-          transform: scale(1.05);
-          transition: 0.2s;
-          border-color: #afa2bdff !important;
-          box-shadow: 0 0 10px #6a11cb80;
-        }
-
-        .btn-animate:hover {
-          transform: scale(1.1);
-          transition: 0.2s;
-          box-shadow: 0 5px 15px rgba(106,17,203,0.4);
-        }
-
-        .btn-animate:active {
-          transform: scale(0.95);
-        }
-      `}</style>
     </div>
   );
 }
 
-// Inline styles
 const styles = {
   body: {
     height: "100vh",
@@ -104,13 +92,14 @@ const styles = {
     alignItems: "center",
     background: "linear-gradient(135deg, #6a11cb, #2575fc)",
     fontFamily: "Arial, sans-serif",
+    overflow: "hidden",
   },
   card: {
     background: "white",
     padding: "40px",
     borderRadius: "15px",
     width: "350px",
-    boxShadow: "0 10px 25px rgba(12, 10, 10, 0.2)",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
     textAlign: "center",
   },
   title: {
@@ -123,6 +112,7 @@ const styles = {
     borderRadius: "10px",
     border: "1px solid #ccc",
     fontSize: "14px",
+    transition: "0.3s",
   },
   button: {
     marginTop: "15px",
@@ -135,6 +125,7 @@ const styles = {
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "bold",
+    transition: "0.3s",
   },
 };
 
