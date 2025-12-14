@@ -43,8 +43,12 @@ A full-stack **Web Application** built using:
 - Connect frontend with backend  
 - Learn new web technologies  
 - Focus on clean, readable code  
-
 ---
+## 🌐 Live Demo
+
+- Frontend: https://heartfelt-torte-78d8ed.netlify.app/
+- Backend API: https://fullstack-web-development-registration-w0os.onrender.com/admin
+
 
 ## 📫 Connect With Me
 📧 **Email:** vedantwasalwar43@gmail.com  
