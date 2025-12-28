@@ -25,13 +25,15 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
-    'corsheaders.middleware.CorsMiddleware',  # ⬅ yahin hona chahiye
-    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -89,11 +91,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 🌍 CORS
 # 🌍 CORS & CSRF (Frontend Fix)
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://fullstack-web-development-registration-w0os.onrender.com",
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
+# CSRF
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://fullstack-web-development-registration-w0os.onrender.com",
 ]
+
+
