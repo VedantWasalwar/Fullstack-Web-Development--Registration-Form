@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'api',
-    'registration',
 ]
 
 MIDDLEWARE = [
@@ -92,21 +91,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 🌍 CORS & CSRF (Frontend Fix)
 
 # CORS
-CORS_ALLOW_ALL_ORIGINS = False
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://fullstack-web-development-registration-w0os.onrender.com",
-]
-
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-# CSRF
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://fullstack-web-development-registration-w0os.onrender.com",
 ]
-
-
