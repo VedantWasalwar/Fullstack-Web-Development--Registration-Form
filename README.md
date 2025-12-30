@@ -1,6 +1,8 @@
 
+<p align="center">
+  <img src="./chat-app.png" width="800" />
+</p>
 
-  <a href="https://heartfelt-torte-78d8ed.netlify.app/"></a> 
 
 
 
