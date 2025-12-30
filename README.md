@@ -1,16 +1,7 @@
-<p align="center">
-  <img src="./chat-app.png" width="800" alt="Chat App Screenshot" />
-</p>
 
-<h2 align="center">Secure Chat App</h2>
 
-<p align="center">
-  This is a secure chat application built using MERN Stack.
-</p>
+  <a href="https://heartfelt-torte-78d8ed.netlify.app/"></a> 
 
-<p align="center">
-  🚀 <a href="https://heartfelt-torte-78d8ed.netlify.app/">Check Live Site</a> 
-</p>
 
 
 
