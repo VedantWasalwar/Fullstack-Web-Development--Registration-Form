@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  🚀 <a href="https://https://heartfelt-torte-78d8ed.netlify.app/">Check Live Site</a> 
+  🚀 <a href="https://heartfelt-torte-78d8ed.netlify.app/">Check Live Site</a> 
 </p>
 
 
