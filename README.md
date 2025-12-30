@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./chat-app.png" width="800" />
+  <img src="./chat-app.png" width="100%" />
 </p>
 
 
