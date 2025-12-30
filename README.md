@@ -54,6 +54,21 @@ A full-stack **Web Application** built using:
 📧 **Email:** vedantwasalwar43@gmail.com  
 🔗 **GitHub:** github.com/VedantWasalwar  
 
+<p align="center">
+  <img src="chat-app.png" width="800" />
+</p>
+
+<h2 align="center">Secure Chat App</h2>
+
+<p align="center">
+  This is a secure chat app using Diffie Hellman key exchange on MERN Stack.
+</p>
+
+<p align="center">
+  🚀 <a href="https://https://heartfelt-torte-78d8ed.netlify.app/">Check Live Site</a> 
+</p>
+
+
 ---
 
 ⭐ *Thanks for visiting my profile! Feel free to explore my web development projects.*
